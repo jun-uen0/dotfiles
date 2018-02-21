@@ -1,4 +1,33 @@
-set fileencodings=utf-8,sjis,iso-2022-jp
+set fileencoding=utf-8
+set fileencodings=utf-8,sjis,iso-2022-jp,euc-jp
+" change encoding samle ':e ++enc=euc-jp'
+set laststatus=2
+set statusline=[%n]\ %t\ %y%{GetStatusEx()}%m%r%=%l,%c%V\ \ \ \ %P
+set comments=
+set tabstop=4
+set noautoindent
+autocmd FileType * set formatoptions-=ro
+ 
+" show encoding
+function! GetStatusEx()
+  let str = &fileformat
+    if has("multi_byte") && &fileencoding != ""
+        let str = &fileencoding . ":" . str
+    endif
+    let str = "[" . str . "]"
+    return str
+endfunction
+ 
+augroup BinaryXXD
+  autocmd!
+  autocmd BufReadPre  *.bin let &binary =1
+  autocmd BufReadPost * if &binary | silent %!xxd -g 1
+  autocmd BufReadPost * set ft=xxd | endif
+  autocmd BufWritePre * if &binary | %!xxd -r | endif
+  autocmd BufWritePost * if &binary | silent %!xxd -g 1
+  autocmd BufWritePost * set nomod | endif
+augroup END
+
 
 set mouse=a
 
