@@ -6,7 +6,8 @@ set statusline=[%n]\ %t\ %y%{GetStatusEx()}%m%r%=%l,%c%V\ \ \ \ %P
 set comments=
 set tabstop=4
 set noautoindent
-set nofixeol
+" until v7.4.785 you have to use ':set bin noeol' before cloging
+" set nofixeol
 autocmd FileType * set formatoptions-=ro
  
 " show encoding
