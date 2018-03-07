@@ -6,6 +6,7 @@ set statusline=[%n]\ %t\ %y%{GetStatusEx()}%m%r%=%l,%c%V\ \ \ \ %P
 set comments=
 set tabstop=4
 set noautoindent
+set nofixeol
 autocmd FileType * set formatoptions-=ro
  
 " show encoding
