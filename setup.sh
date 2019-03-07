@@ -31,4 +31,6 @@ if isMac; then
   brew install git rmtrash
 fi
 
+# git
+ln -s $DIR/gitconfig ~/.gitconfig
 

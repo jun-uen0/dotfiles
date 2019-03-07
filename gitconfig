@@ -1,0 +1,20 @@
+[user]
+	name = dobashi
+	email = dobashi@lavans.jp
+[alias]
+	a = add .
+	b = branch
+	c = commit
+	co = checkout
+	d = diff
+	l  = log
+	lo = log --oneline
+	lp = log --no-merges --date=short --pretty='format:%C(yellow)%h %C(green)%cd %C(blue)%an%C(red)%d %C(reset)%s'
+	p  = pull
+	pd = pull --recurse-submodules origin develop
+	pm = pull --recurse-submodules origin master
+	ps  = push
+	psd = push origin develop
+	psm = push origin master
+	s = status
+	su = submodule update

@@ -34,15 +34,7 @@ fi
 
 # git
 alias g='git'
-alias ga='git add .'
-alias gb='git branch'
-alias gc='git commit'
 alias gac='git add .;git commit'
-alias gp='git pull --recurse-submodules origin develop'
-alias gpm='git pull --recurse-submodules origin master'
-alias gpsd='git push origin develop'
-alias gpsm='git push origin master'
-alias gl='git log'
 alias gsu='git submodule update'
 
 # gradle
