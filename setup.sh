@@ -18,6 +18,9 @@ EOF
 # vim
 ln -s $DIR/vimrc ~/.vimrc
 
+# git
+ln -s $DIR/gitconfig ~/.gitconfig
+
 # Linux
 if isLinux; then
   sudo apt update -y \
@@ -28,9 +31,8 @@ fi
 
 # macOS
 if isMac; then
-  brew install git rmtrash
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  brew install git rmtrash pstree 
 fi
 
-# git
-ln -s $DIR/gitconfig ~/.gitconfig
 
