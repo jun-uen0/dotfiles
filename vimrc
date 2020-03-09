@@ -1,3 +1,4 @@
+set nu
 set fileencoding=utf-8
 set fileencodings=utf-8,sjis,iso-2022-jp,euc-jp
 " change encoding samle ':e ++enc=euc-jp'

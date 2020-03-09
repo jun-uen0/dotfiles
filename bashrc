@@ -49,5 +49,7 @@ PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 alias gradlea='./gradlew assemble'
 alias gradleb='./gradlew build'
 alias gradlec='./gradlew clean' 
-alias gradlei='./gradlew install' 
+alias gradlei='./gradlew --warning-mode all publishToMaveLocal'
 
+# npm
+export PATH=$PATH:./node_modules/.bin/:./assets/node_modules/.bin/
