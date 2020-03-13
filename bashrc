@@ -37,7 +37,8 @@ if isMac; then
 fi
 
 # git
-alias g='git'
+alias gp='git pull'
+alias gps='git push'
 alias gac='git add .;git commit'
 alias gsu='git submodule update'
 
