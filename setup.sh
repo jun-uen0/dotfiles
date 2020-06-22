@@ -20,6 +20,8 @@ ln -s $DIR/vimrc ~/.vimrc
 
 # git
 ln -s $DIR/gitconfig ~/.gitconfig
+ln -s $DIR/git-prompt.sh ~/.git-prompt.sh
+ln -s $DIR/git-completion.bash ~/.git-completion.bash
 
 # Linux
 if isLinux; then
