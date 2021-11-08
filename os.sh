@@ -13,4 +13,6 @@ isMac(){
   [ $(uname) = "Darwin" ]
 }
 
-
+isCygwin(){
+  [ $(uname -o) = "Cygwin" ]
+}

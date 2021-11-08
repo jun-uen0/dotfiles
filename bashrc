@@ -6,6 +6,9 @@ isLinux() {
 isMac() {
   [ $(uname) = "Darwin" ]
 }
+isCygwin() {
+  [ $(uname -o) = "Cygwin" ]
+}
 
 export EDITOR=vim
 export GIT_EDITOR=$EDITOR
@@ -32,7 +35,12 @@ if isMac; then
   alias updatedb='cd /usr/libexec; sudo /usr/libexec/locate.updatedb'
 fi
 
-# git
+# Cygwin
+if isCygwin; then
+  alias open='explorer'
+fi
+
+#git
 alias g='git'
 alias gac='git add .;git commit'
 alias gsu='git submodule update'
