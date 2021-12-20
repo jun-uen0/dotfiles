@@ -28,7 +28,8 @@ fi
 
 # macOS
 if isMac; then
-  brew install git rmtrash
+  cat ~/.bashrc >> ~/.zshrc
+  brew install git trash
 fi
 
 # git

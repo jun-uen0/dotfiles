@@ -7,7 +7,7 @@ isMac() {
   [ $(uname) = "Darwin" ]
 }
 isCygwin() {
-  [ $(uname -o) = "Cygwin" ]
+#  [ $(uname -o) = "Cygwin" ]
 }
 
 export EDITOR=vim
@@ -30,9 +30,10 @@ fi
 
 # macOS
 if isMac; then
-  alias rm='rmtrash'
+  alias rm='trash -F'
   alias top='top -o cpu'
   alias updatedb='cd /usr/libexec; sudo /usr/libexec/locate.updatedb'
+  alias code='/Applications/Visual\ Studio\ Code.app/Contents/MacOS/Electron'
 fi
 
 # Cygwin
