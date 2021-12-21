@@ -29,7 +29,7 @@ fi
 # macOS
 if isMac; then
   cat ~/.bashrc >> ~/.zshrc
-  brew install git trash
+  brew install git trash tree
 fi
 
 # git
