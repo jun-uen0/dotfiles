@@ -29,7 +29,8 @@ fi
 # macOS
 if isMac; then
   cat ~/.bashrc >> ~/.zshrc
-  brew install git trash tree
+  brew install git trash tree vim
+  defaults write -g ApplePressAndHoldEnabled -bool false
 fi
 
 # git

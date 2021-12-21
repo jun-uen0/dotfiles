@@ -34,6 +34,7 @@ if isMac; then
   alias top='top -o cpu'
   alias updatedb='cd /usr/libexec; sudo /usr/libexec/locate.updatedb'
   alias code='/Applications/Visual\ Studio\ Code.app/Contents/MacOS/Electron'
+  alias vim='/opt/homebrew/bin/vim'
 fi
 
 # Cygwin

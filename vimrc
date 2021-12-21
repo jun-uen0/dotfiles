@@ -30,7 +30,6 @@ augroup BinaryXXD
   autocmd BufWritePost * set nomod | endif
 augroup END
 
-
 set mouse=a
 
 " enable clipboard for macOS
