@@ -22,5 +22,6 @@
 	su = submodule update
 [pull]
 	default = current
+	rebase = merges
 [push]
 	default = current
