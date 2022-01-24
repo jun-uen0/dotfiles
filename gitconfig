@@ -20,3 +20,6 @@
 	psm = push origin master
 	s = status
 	su = submodule update
+[push]
+    default = current
+

@@ -1016,8 +1016,9 @@ __git_complete_strategy ()
 __git_all_commands=
 __git_compute_all_commands ()
 {
-	test -n "$__git_all_commands" ||
-	__git_all_commands=$(git --list-cmds=main,others,alias,nohelpers)
+	 test -n "$__git_all_commands" ||
+	 __git_all_commands=$(git)
+	# __git_all_commands=$(git --list-cmds=main,others,alias,nohelpers)
 }
 
 # Lists all set config variables starting with the given section prefix,
