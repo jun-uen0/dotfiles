@@ -6,6 +6,10 @@ isLinux() {
 isMac() {
   [ $(uname) = "Darwin" ]
 }
+isCygwin() {
+  false
+#  [ $(uname -o) = "Cygwin" ]
+}
 
 export EDITOR=vim
 export GIT_EDITOR=$EDITOR
@@ -31,14 +35,20 @@ fi
 
 # macOS
 if isMac; then
-#  alias rm='rmtrash'
+  alias rm='trash -F'
   alias top='top -o cpu'
   alias updatedb='cd /usr/libexec; sudo /usr/libexec/locate.updatedb'
+  alias code='/Applications/Visual\ Studio\ Code.app/Contents/MacOS/Electron'
+  alias vim='/opt/homebrew/bin/vim'
 fi
 
-# git
-alias gp='git pull'
-alias gps='git push'
+# Cygwin
+if isCygwin; then
+  alias open='explorer'
+fi
+
+#git
+alias g='git'
 alias gac='git add .;git commit'
 alias gsu='git submodule update'
 

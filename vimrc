@@ -2,7 +2,7 @@ set nu
 set clipboard=unnamed
 set fileencoding=utf-8
 set fileencodings=utf-8,sjis,iso-2022-jp,euc-jp
-" change encoding samle ':e ++enc=euc-jp'
+" change encoding sample ':e ++enc=euc-jp'
 set laststatus=2
 set statusline=[%n]\ %t\ %y%{GetStatusEx()}%m%r%=%l,%c%V\ \ \ \ %P
 set comments=
@@ -32,7 +32,6 @@ augroup BinaryXXD
   autocmd BufWritePost * set nomod | endif
 augroup END
 
-
 set mouse=a
 
 " enable clipboard for macOS
@@ -45,3 +44,6 @@ let g:solarized_termcolors=256
 
 " cursor move to next line with left/right
 set whichwrap=b,s,h,l,<,>,[,],~
+
+" beep off
+" set belloff=all
