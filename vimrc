@@ -47,3 +47,6 @@ set whichwrap=b,s,h,l,<,>,[,],~
 
 " beep off
 " set belloff=all
+noremap <C-\[> <esc>
+noremap! <C-\[> <esc>
+inoremap ;; <esc>

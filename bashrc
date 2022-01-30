@@ -6,9 +6,12 @@ isLinux() {
 isMac() {
   [ $(uname) = "Darwin" ]
 }
-isCygwin() {
-  false
-#  [ $(uname -o) = "Cygwin" ]
+isCygwin(){
+  if [[ isLinux || isMac ]] ; then
+   false 
+  else
+    [ $(uname -o) = "Cygwin" ]
+  fi
 }
 
 export EDITOR=vim
@@ -37,7 +40,8 @@ fi
 if isMac; then
   alias rm='trash -F'
   alias top='top -o cpu'
-  alias updatedb='cd /usr/libexec; sudo /usr/libexec/locate.updatedb'
+  alias locate='mdfind -name'
+  #alias updatedb='cd /usr/libexec; sudo /usr/libexec/locate.updatedb'
   alias code='/Applications/Visual\ Studio\ Code.app/Contents/MacOS/Electron'
   alias vim='/opt/homebrew/bin/vim'
 #  . /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.zsh
@@ -46,8 +50,9 @@ if isMac; then
   GIT_PS1_SHOWUNTRACKEDFILES=true
   GIT_PS1_SHOWSTASHSTATE=true
   GIT_PS1_SHOWUPSTREAM=auto
-  setopt PROMPT_SUBST ; PS1='%F{green}%n@%m%f: %F{cyan}%~%f %F{red}$(__git_ps1 "(%s)")%f
-\$ '
+  setopt PROMPT_SUBST ; PS1='%F{green}%n@%m%f:%F{cyan}%1~%F{red}$(__git_ps1 "(%s)")%f\$ '
+#  setopt PROMPT_SUBST ; PS1='%F{green}%n@%m%f: %F{cyan}%~%f %F{red}$(__git_ps1 "(%s)")%f
+#\$ '
 fi
 
 # Cygwin
