@@ -10,6 +10,5 @@
         l  = log
         p  = pull
         ps  = push
-        ori = origin
         confname = config user.name "jun-uen0"
         confmail = config user.email "hello@junueno.dev"
