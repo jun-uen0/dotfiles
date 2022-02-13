@@ -2,11 +2,14 @@
 	name = jun-uen0
 	email = hello@junueno.dev
 [alias]
-	a = add
-	b = branch
-	c = commit
-	co = checkout
-    	df = diff
-	l  = log
-	p  = pull
-	ps  = push
+        a = add
+        b = branch
+        c = commit -m
+        co = checkout
+        df = diff
+        l  = log
+        p  = pull
+        ps  = push
+        ori = origin
+        confname = config user.name "jun-uen0"
+        confmail = config user.email "hello@junueno.dev"
